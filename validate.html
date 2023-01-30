@@ -1,0 +1,50 @@
+<html>
+<body>
+<script>  
+
+function validateform(){  
+
+var name=document.myform.name.value;  
+var password=document.myform.password.value; 
+var repassword=document.myform.repassword.value;
+var mobile=document.myform.mobile.value; 
+var email=document.myform.email.value;
+  
+ if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+} if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  } 
+  if(password!=repassword){
+    alert("Enter Correct Password");  
+  }
+  
+   
+} if(mobile.length<10 || mobile.length>10){
+  alert("Mobile no. must be 10 digits")
+}
+if(email.length==NULL || email.length==""){
+alert("Enter Valid Email Address")
+}
+
+</script>  
+<body>  
+
+<p> <b>Validation Form </b><p>
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+Name</br> <input type="text" placeholder="Enter Name" name="name"><br/>  
+Password</br>  <input type="password" placeholder="Enter Password" name="password"><br/> 
+Repeat Password</br>  <input type="password" placeholder="Enter Repeat Password" name="repassword"><br/>  
+Mobile </br>  <input type="text" placeholder="Enter Mobile" name="mobile" ><br/>   
+Email </br>  <input type="text" placeholder="Enter Email" name="email"> <br/>  
+<input type="submit" value="register">  <br/>  
+</form>  
+
+</form>  
+</body>
+</html>
+
+ 
+
